@@ -1,16 +1,33 @@
-# rxdart_examples
+# RXDart Examples
 
-A new Flutter project.
+Subject <=> StreamController
 
-## Getting Started
+Subject - на него можно подписываться неограниченное количество раз.
 
-This project is a starting point for a Flutter application.
+Есть 3 типа Subject.
 
-A few resources to get you started if this is your first Flutter project:
+- PublishSubject - Обычный
+- BehaviorSubject - Запоминает предыдущее значение в стриме
+- ReplaySubject - По умолчанию запоминает все значения, можно ограничить параметром maxSize
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+__Примеры смотреть в lib/examples__
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Map method
+
+Внутри стрима, можно преобразовать данные в другой тип или вид.
+
+## Where method
+
+Фильтрует данные из стрима
+
+## Debounce method
+
+Реагирует на последнее значение, если данные не поступали N-е количество времени
+
+## Merge method
+
+Объединяет два и более стрима в один стрим
+
+## Zip Method
+
+Объединяет два стрима в один, дожидаясь данных из обоих стримов
